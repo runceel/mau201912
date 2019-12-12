@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: Azure/pipelines@v1
+      with:
+        azure-devops-project-url: 'https://dev.azure.com/kaota/mau201912'
+        azure-pipeline-name: 'MAU201912'
+        azure-devops-token: '${{ secrets.AZURE_DEVOPS_TOKEN }}'
